@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "declaration": true,
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "outDir": "lib",
+    "resolveJsonModule": false
+  },
+  "include": ["src"],
+  "exclude": ["lib", "example", "node_modules", "__tests__", "**/*.spec.ts"]
+}

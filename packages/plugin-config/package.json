@@ -1,0 +1,25 @@
+{
+  "name": "plugin-config",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Matt <lkd49789@163.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/plugin-config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "keywords": [],
+  "dependencies": {
+    "webpack": "^5.72.0"
+  },
+  "devDependencies": {
+    "umi": "^3.5.23"
+  }
+}

@@ -28,5 +28,9 @@
   },
   "bugs": {
     "url": "https://github.com/lkd49789/umi-plugin/issues"
+  },
+  "gitHead": "056f2f89bc7ec1d4f33dd1dfb4df564a7c30d54f",
+  "publishConfig": {
+    "access": "public"
   }
 }

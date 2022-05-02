@@ -21,5 +21,9 @@
   },
   "devDependencies": {
     "umi": "^3.5.23"
+  },
+  "gitHead": "056f2f89bc7ec1d4f33dd1dfb4df564a7c30d54f",
+  "publishConfig": {
+    "access": "public"
   }
 }

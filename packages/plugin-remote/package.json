@@ -1,6 +1,6 @@
 {
   "name": "@matt/plugin-remote",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "umi webpakc module federation plugin",
   "keywords": [
     "umi",

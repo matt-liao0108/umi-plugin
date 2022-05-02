@@ -21,7 +21,7 @@ export default function (api: IApi) {
   });
 
   api.onGenerateFiles(async () => {
-    const tmpPath = join(__dirname, './exports.tsx.tpl');
+    const tmpPath = join(__dirname, '../exports.tsx.tpl');
     const content = readFileSync(tmpPath, 'utf-8');
     api.writeTmpFile({
       path: 'plugin-matt-remote/exports.tsx',
@@ -60,7 +60,7 @@ export default function (api: IApi) {
     },
   ];
   api.chainWebpack((config) => {
-    const { shared = [], ...resConfig } = remote;
+    const { shared = [], ...resConfig } = remote || {};
     const remoteConfig = merge(
       {
         filename,
@@ -68,7 +68,6 @@ export default function (api: IApi) {
       },
       resConfig
     );
-    console.log(remoteConfig);
     config.plugin('federation').use(require('webpack/lib/container/ModuleFederationPlugin'), [remoteConfig]);
     config.output.publicPath('auto');
     return config;

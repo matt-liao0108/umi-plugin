@@ -1,11 +1,15 @@
-# `plugin-config`
+# `@matt-umi/plugin-config`
 
-> TODO: description
+> TODO: umi 插件 发布后版本检测，提示更新
 
 ## Usage
 
-```
-const pluginConfig = require('plugin-config');
+```typescript
+{
+	plugins:['@matt-umi/plugin-config'],
+	matt:{
+		checkHTMLVersions:true // 默认生产开启
+	}
 
-// TODO: DEMONSTRATE API
+}
 ```

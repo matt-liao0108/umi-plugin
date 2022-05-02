@@ -8,6 +8,6 @@
     "packages/*"
   ],
   "scripts": {
-    "forcePublish": "lerna publish --force-publish --no-git-tag-version --no-push"
+    "forcePublish": "lerna publish --force-publish  --no-push"
   }
 }

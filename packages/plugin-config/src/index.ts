@@ -22,7 +22,7 @@ export default function (api: IApi) {
   });
 
   async function generatorInt() {
-    const tmpPath = join(__dirname, './runtime.tpl');
+    const tmpPath = join(__dirname, '../runtime.tpl');
     const content = readFileSync(tmpPath, 'utf-8');
     api.writeTmpFile({
       path: 'plugin-matt-config/entry.tsx',

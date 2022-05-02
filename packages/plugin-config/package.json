@@ -1,11 +1,11 @@
 {
   "name": "@matt-umi/plugin-config",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "umi config",
   "author": "Matt <lkd49789@163.com>",
   "homepage": "https://github.com/lkd49789/umi-plugin#readme",
   "license": "ISC",
-  "main": "lib/plugin-config.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib"
   },

@@ -1,9 +1,9 @@
 {
   "name": "@matt-umi/plugin-config",
-  "version": "1.0.9",
-  "description": "> TODO: description",
+  "version": "1.0.0",
+  "description": "umi config",
   "author": "Matt <lkd49789@163.com>",
-  "homepage": "",
+  "homepage": "https://github.com/lkd49789/umi-plugin#readme",
   "license": "ISC",
   "main": "lib/plugin-config.js",
   "directories": {
@@ -12,17 +12,17 @@
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkd49789/umi-plugin.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "keywords": [],
-  "dependencies": {
-    "webpack": "^5.72.0"
-  },
-  "devDependencies": {
-    "umi": "^3.5.23"
-  },
-  "gitHead": "239d63e1d2f0bdf87029ed7cf240020e0d43a490",
+  "keywords": [
+    "umi"
+  ],
+  "gitHead": "e55515cb3299c9b9a2d027f39a510a22d64a207e",
   "publishConfig": {
     "access": "public"
   }

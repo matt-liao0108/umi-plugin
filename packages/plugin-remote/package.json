@@ -1,6 +1,6 @@
 {
   "name": "@matt-umi/plugin-remote",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "umi webpack module federation plugin",
   "keywords": [
     "umi",
@@ -34,5 +34,8 @@
   "gitHead": "aaec620f4942ac6d1e7edde1977f41f52013a113",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "webpack": "5.38.1"
   }
 }

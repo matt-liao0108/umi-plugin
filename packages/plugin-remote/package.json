@@ -1,6 +1,6 @@
 {
   "name": "@matt-umi/plugin-remote",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "umi webpack module federation plugin",
   "keywords": [
     "umi",
@@ -17,19 +17,21 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "exports.tsx.tpl"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lkd49789/umi-plugin.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc"
   },
   "bugs": {
     "url": "https://github.com/lkd49789/umi-plugin/issues"
   },
-  "gitHead": "e55515cb3299c9b9a2d027f39a510a22d64a207e",
+  "gitHead": "57784fa49eb5cca2f323b629c3d2667a1328c0f5",
   "publishConfig": {
     "access": "public"
   }

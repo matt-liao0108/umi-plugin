@@ -1,6 +1,6 @@
 {
   "name": "@matt-umi/plugin-config",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "umi config",
   "author": "Matt <lkd49789@163.com>",
   "homepage": "https://github.com/lkd49789/umi-plugin#readme",
@@ -10,19 +10,21 @@
     "lib": "lib"
   },
   "files": [
-    "lib"
+    "lib",
+    "runtime.tpl"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lkd49789/umi-plugin.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [
     "umi"
   ],
-  "gitHead": "e55515cb3299c9b9a2d027f39a510a22d64a207e",
+  "gitHead": "57784fa49eb5cca2f323b629c3d2667a1328c0f5",
   "publishConfig": {
     "access": "public"
   }

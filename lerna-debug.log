@@ -1,4 +1,0 @@
-42 error Error: Command failed with exit code 128: git push --follow-tags --no-verify --atomic origin master
-42 error fatal: unable to access 'https://github.com/lkd49789/umi-plugin.git/': Failed to connect to github.com port 443: Operation timed out
-42 error     at makeError (/Users/l/Desktop/react/umi-plugin/node_modules/execa/lib/error.js:60:11)
-42 error     at handlePromise (/Users/l/Desktop/react/umi-plugin/node_modules/execa/index.js:118:26)

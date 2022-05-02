@@ -1,6 +1,6 @@
 {
   "name": "@matt-umi/plugin-remote",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "umi webpakc module federation plugin",
   "keywords": [
     "umi",
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/lkd49789/umi-plugin/issues"
   },
-  "gitHead": "809285c597454b8d412ba418f6c20f02ba3a3c8e",
+  "gitHead": "239d63e1d2f0bdf87029ed7cf240020e0d43a490",
   "publishConfig": {
     "access": "public"
   }

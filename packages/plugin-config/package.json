@@ -1,6 +1,6 @@
 {
   "name": "@matt-umi/plugin-config",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "> TODO: description",
   "author": "Matt <lkd49789@163.com>",
   "homepage": "",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "umi": "^3.5.23"
   },
-  "gitHead": "809285c597454b8d412ba418f6c20f02ba3a3c8e",
+  "gitHead": "239d63e1d2f0bdf87029ed7cf240020e0d43a490",
   "publishConfig": {
     "access": "public"
   }

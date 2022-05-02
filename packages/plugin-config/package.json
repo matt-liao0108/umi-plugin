@@ -1,6 +1,6 @@
 {
   "name": "@matt-umi/plugin-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "umi config",
   "author": "Matt <lkd49789@163.com>",
   "homepage": "https://github.com/lkd49789/umi-plugin#readme",
@@ -24,7 +24,7 @@
   "keywords": [
     "umi"
   ],
-  "gitHead": "57784fa49eb5cca2f323b629c3d2667a1328c0f5",
+  "gitHead": "aaec620f4942ac6d1e7edde1977f41f52013a113",
   "publishConfig": {
     "access": "public"
   }

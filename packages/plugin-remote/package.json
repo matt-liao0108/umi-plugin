@@ -1,0 +1,32 @@
+{
+  "name": "@matt/plugin-remote",
+  "version": "1.0.0",
+  "description": "umi webpakc module federation plugin",
+  "keywords": [
+    "umi",
+    "webpakc",
+    "module",
+    "federation"
+  ],
+  "author": "Matt <lkd49789@163.com>",
+  "homepage": "https://github.com/lkd49789/umi-plugin#readme",
+  "license": "ISC",
+  "main": "lib/plugin-remote.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkd49789/umi-plugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/lkd49789/umi-plugin/issues"
+  }
+}

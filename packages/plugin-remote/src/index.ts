@@ -2,6 +2,7 @@ import { IApi } from 'umi';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 import { merge } from 'lodash';
+import { normalizeRemotes } from './helper';
 
 export default function (api: IApi) {
   const { remote } = api.userConfig;
@@ -60,11 +61,13 @@ export default function (api: IApi) {
     },
   ];
   api.chainWebpack((config) => {
-    const { shared = [], ...resConfig } = remote || {};
+    let { shared = [], remotes, ...resConfig } = remote || {};
+    remotes = normalizeRemotes(remotes, filename);
     const remoteConfig = merge(
       {
         filename,
         shared: defualtShared.concat(shared),
+        remotes,
       },
       resConfig
     );

@@ -9,5 +9,8 @@
   ],
   "scripts": {
     "forcePublish": "lerna publish --force-publish  --no-push"
+  },
+  "dependencies": {
+    "umi": "^3.5.23"
   }
 }

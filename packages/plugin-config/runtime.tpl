@@ -30,7 +30,7 @@ const version = {{version}};
 })();
 
 {{=<% %>=}}
-export const defaultFallback = (
+const defaultFallback = (
   <Spin
     style={{
       padding: '6px',

@@ -29,6 +29,7 @@ const version = {{version}};
   }
 })();
 
+{{=<% %>=}}
 export const defaultFallback = (
   <Spin
     style={{
@@ -38,6 +39,7 @@ export const defaultFallback = (
     size="small"
   />
 );
+<%={{ }}=%>
 
 const ThemeProvider = (props)=>{
   return <Suspense fallback={props.fallback || defaultFallback}>

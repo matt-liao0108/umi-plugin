@@ -1,7 +1,7 @@
 import { IApi } from 'umi';
 import { join } from 'path';
 import { readFileSync } from 'fs';
-import { merge } from 'lodash';
+import { get } from 'lodash';
 
 export default function (api: IApi) {
   const { matt: config } = api.userConfig;
@@ -16,6 +16,17 @@ export default function (api: IApi) {
       },
     },
   });
+
+  api.register({
+    key: 'mattConfig',
+    fn() {
+      return {
+        ...config,
+        checkHTMLVersions: get(config, 'checkHTMLVersions', true),
+      };
+    },
+  });
+
   const version = Date.now();
   api.modifyProdHTMLContent((content) => {
     return `<!-- version:${version} -->${content}`;
@@ -24,11 +35,16 @@ export default function (api: IApi) {
   async function generatorInt() {
     const tmpPath = join(__dirname, '../runtime.tpl');
     const content = readFileSync(tmpPath, 'utf-8');
+    const mattConfig = await api.applyPlugins({
+      key: 'mattConfig',
+      type: api.ApplyPluginsType.modify,
+    });
+
     api.writeTmpFile({
       path: 'plugin-matt-config/entry.tsx',
       content: api.utils.Mustache.render(content, {
         version,
-        checkHTMLVersions: config.checkHTMLVersions && process.env.NODE_ENV === 'prodution',
+        checkHTMLVersions: mattConfig.checkHTMLVersions && process.env.NODE_ENV === 'prodution',
       }),
     });
   }

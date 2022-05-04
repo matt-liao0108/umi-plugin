@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{Suspense} from 'react';
 import { get } from 'lodash';
-import { message, Button } from 'antd';
+import { message, Button,Spin } from 'antd';
 
 const version = {{version}};
 
@@ -29,10 +29,20 @@ const version = {{version}};
   }
 })();
 
+export const defaultFallback = (
+  <Spin
+    style={{
+      padding: '6px',
+    }}
+    spinning={true}
+    size="small"
+  />
+);
+
 const ThemeProvider = (props)=>{
-  return <div>
+  return <Suspense fallback={props.fallback || defaultFallback}>
   {props.children}
-  </div>
+  </Suspense>
 }
 
 export function rootContainer(container) {

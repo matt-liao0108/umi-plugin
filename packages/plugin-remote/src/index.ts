@@ -1,7 +1,7 @@
 import { IApi } from 'umi';
 import { join } from 'path';
-import { readFileSync } from 'fs';
-import { merge } from 'lodash';
+import { readFileSync, existsSync } from 'fs';
+import { merge, chain } from 'lodash';
 import { normalizeRemotes } from './helper';
 
 export default function (api: IApi) {
@@ -28,8 +28,13 @@ export default function (api: IApi) {
       path: 'plugin-matt-remote/exports.tsx',
       content,
     });
+    if (!existsSync(join(api.paths.absTmpPath, 'entry.ts'))) {
+      api.writeTmpFile({
+        path: 'entry.ts',
+        content: `import("./umi.ts")`,
+      });
+    }
   });
-
   api.addUmiExports(() => ({
     source: '../plugin-matt-remote/exports',
     exportAll: true,
@@ -71,8 +76,31 @@ export default function (api: IApi) {
       },
       resConfig
     );
+
+    if (remoteConfig.exposes) {
+      remoteConfig.exposes = chain(remoteConfig.exposes)
+        .toPairs()
+        .reduce(
+          (p, [module, src]) => ({
+            ...p,
+            [module.startsWith('./') ? module : `./${module}`]: src,
+          }),
+          {}
+        )
+        .value();
+    }
     config.plugin('federation').use(require('webpack/lib/container/ModuleFederationPlugin'), [remoteConfig]);
     config.output.publicPath('auto');
     return config;
+  });
+  api.modifyConfig((memo) => {
+    return {
+      dynamicImportSyntax: {},
+      ...memo,
+    };
+  });
+  api.modifyBundleConfig((bundleConfig) => {
+    bundleConfig.entry.umi = join(api.paths.absTmpPath, 'entry.ts');
+    return bundleConfig;
   });
 }

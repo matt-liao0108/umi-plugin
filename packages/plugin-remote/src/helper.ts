@@ -8,7 +8,8 @@ export const normalizeRemotes = (remotes: Record<string, string>, filename) => {
       }
       if (!entry.endsWith(filename)) {
         const urlArr = entry.match(/(^[^@]*@)?(.+)/);
-        entry = `${urlArr[1]}${new URL(urlArr[2]).origin}/${filename}`;
+        const url = new URL(urlArr[2]);
+        entry = `${urlArr[1]}${url.origin}${url.pathname}/${filename}`;
       }
       return {
         ...p,

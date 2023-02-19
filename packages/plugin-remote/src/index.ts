@@ -100,6 +100,7 @@ export default function (api: IApi) {
     };
   });
   api.modifyBundleConfig((bundleConfig) => {
+    //@ts-ignore
     bundleConfig.entry.umi = join(api.paths.absTmpPath, 'entry.ts');
     return bundleConfig;
   });

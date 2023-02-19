@@ -1,15 +1,16 @@
 {
-  "name": "@matt-umi/plugin-remote",
-  "version": "1.1.5",
-  "description": "umi webpack module federation plugin",
+  "name": "umi-request-progress-middleware",
+  "version": "1.0.0",
+  "description": "Middleware used by umi-request to obtain upload and download progress",
   "keywords": [
     "umi",
-    "webpack",
-    "module federation",
-    "webpack5",
-    "umi plugin",
-    "模块联邦",
-    "远程加载组件插件"
+    "umi-request middleware",
+    "umi-request 中间件",
+    "网络请求",
+    "fetch 下载进度",
+    "download progress",
+    "process",
+    "下载进度"
   ],
   "author": "Matt <matt_liao@163.com>",
   "homepage": "https://github.com/matt-liao0108/umi-plugin#readme",
@@ -20,8 +21,7 @@
     "test": "__tests__"
   },
   "files": [
-    "lib",
-    "exports.tsx.tpl"
+    "lib"
   ],
   "repository": {
     "type": "git",
@@ -34,11 +34,7 @@
   "bugs": {
     "url": "https://github.com/matt-liao0108/umi-plugin/issues"
   },
-  "gitHead": "aaec620f4942ac6d1e7edde1977f41f52013a113",
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "webpack": "5.38.1"
+  "devDependencies": {
+    "umi-request": "^1.4.0"
   }
 }
